@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sacramento&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+/* Container for all Screens */
+/* Small Screens */
+@media (min-width: 768px) {
+  .container {
+    margin: auto;
+    width: 750px;
+  }
+}
+/* Medium Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+
+/* Start Header */
+header {
+  height: 100px;
+  background-color: #0c0c0c;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    color: white;
+    .links {
+      display: flex;
+      gap: 1.5rem;
+      nav ul {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .login {
+        display: flex;
+        gap: 1rem;
+        position: relative;
+        &:has(svg) svg {
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+        .buy__icon::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #dec700;
+          bottom: 5px;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+/* End Header */
+/* Start Global styles */
+.logo {
+  font-size: 1.2rem;
+  span {
+    display: block;
+    font-family: "Sacramento", cursive;
+    font-weight: normal;
+    color: #dec700;
+  }
+}
+.section-name {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  a span {
+    margin-right: 0.3rem;
+  }
+}
+
+/* End Global styles */
+
+/* Start Hero */
+.hero {
+  background-color: #131111;
+  position: relative;
+  height: calc(100vh - 100px);
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: 100%;
+  }
+
+  .hero__img {
+    max-width: 24rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .hero__text {
+    max-width: 25rem;
+    color: white;
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      &::after {
+        content: "Fresh Fruits";
+        position: absolute;
+        font-family: "Sacramento", cursive;
+        color: #dec700;
+        font-size: 2rem;
+        width: 10rem;
+        bottom: 0;
+      }
+    }
+    p {
+      color: gray;
+    }
+  }
+
+  .hero__socials {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #dec700;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    font-size: 1.3rem;
+  }
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-color: gray;
+  margin-block: 1.5rem;
+}
+/* End Hero */
+/* Start fruit */
+.fruit {
+  background-color: black;
+  padding-block: 3rem;
+}
+
+#favorite,
+#shop {
+  margin-bottom: 2rem;
+  .product-cards {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    .card {
+      flex-basis: 23%;
+      background-color: #18181a;
+      min-width: 16.25rem;
+      .card__img img {
+        width: 100%;
+      }
+      .card__desc {
+        padding: 1.5rem;
+        h3 {
+          color: white;
+        }
+        p {
+          margin-block: 0.7rem;
+        }
+        p,
+        .price del {
+          color: gray;
+        }
+        .price span {
+          color: white;
+          margin-right: 5px;
+        }
+      }
+      .card__actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem 1rem;
+        color: white;
+        .count {
+          padding: 1rem;
+          border: 1px solid;
+          i {
+            cursor: pointer;
+          }
+          span {
+            margin-inline: 0.5rem;
+          }
+        }
+        button {
+          all: unset;
+          cursor: pointer;
+          padding: 1rem;
+          background-color: #dec700;
+        }
+      }
+    }
+  }
+}
+/* End fruit */
+/* Start AboutUS */
+#about {
+  background-color: #090a10;
+  padding-block: 2rem;
+  .peoples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 0.5rem;
+  }
+}
+
+figure {
+  flex-basis: 32%;
+  padding: 1.3rem;
+  background-color: #18181a;
+  min-width: 20rem;
+  .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+    .user__rate i {
+      color: white;
+    }
+  }
+  h3 {
+    color: white;
+  }
+  figcaption {
+    color: gray;
+    margin-block: 1rem;
+  }
+}
+/* End AboutUS */
+/* Start footer */
+footer {
+  background-color: black;
+  padding: 2rem 2rem 0;
+  position: relative;
+  .upper-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    label {
+      font-size: 3rem;
+      color: gray;
+      font-weight: bold;
+      max-width: 20rem;
+    }
+    .inputs {
+      position: relative;
+    }
+    input[type="email"] {
+      outline: 0;
+      min-width: 25rem;
+      font-size: 1.5rem;
+      background-color: transparent;
+      border: 1px solid gray;
+      display: inline-block;
+      padding: 0.5rem;
+      color: white;
+    }
+    button {
+      all: unset;
+      background-color: #dec700;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      padding-inline: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .socials {
+    display: flex;
+    height: 12rem;
+    width: 16rem;
+    background-color: #18181a;
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 3rem;
+    align-items: center;
+    .socials__icons a {
+      display: inline-block;
+      margin: 1rem 1rem 0 0;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.footer__content {
+  margin-top: 6rem;
+  padding-block: 2rem;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  .links {
+    display: flex;
+    gap: 1.3rem;
+  }
+}
+/* End footer */
