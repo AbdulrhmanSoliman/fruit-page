@@ -110,8 +110,7 @@ header {
 .hero {
   background-color: #131111;
   position: relative;
-  height: calc(100vh - 100px);
-
+  padding-bottom: 2rem;
   .container {
     display: flex;
     align-items: center;
